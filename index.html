@@ -1,0 +1,863 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WordCloud Demo</title>
+        <script type="text/javascript" src="./echarts.js"></script>
+        <script type="text/javascript" src="./echarts-wordcloud.js"></script>
+    </head>
+    <body>
+        <div id="main" style="width: 100%; height: 900px"></div>
+        <script>
+            onload = function () {
+                var data = {
+                    value: [
+					  {
+						"name": "致敬",
+						"value": 1528
+					  },
+					  {
+						"name": "我们",
+						"value": 1312
+					  },
+					  {
+						"name": "加油",
+						"value": 1128
+					  },
+					  {
+						"name": "中国",
+						"value": 1087
+					  },
+					  {
+						"name": "疫情",
+						"value": 970
+					  },
+					  {
+						"name": "武汉",
+						"value": 921
+					  },
+					  {
+						"name": "英雄",
+						"value": 861
+					  },
+					  {
+						"name": "你们",
+						"value": 827
+					  },
+					  {
+						"name": "真的",
+						"value": 807
+					  },
+					  {
+						"name": "感谢",
+						"value": 795
+					  },
+					  {
+						"name": "感动",
+						"value": 661
+					  },
+					  {
+						"name": "这个",
+						"value": 654
+					  },
+					  {
+						"name": "没有",
+						"value": 649
+					  },
+					  {
+						"name": "所有",
+						"value": 629
+					  },
+					  {
+						"name": "不敢",
+						"value": 600
+					  },
+					  {
+						"name": "一起",
+						"value": 597
+					  },
+					  {
+						"name": "医护人员",
+						"value": 583
+					  },
+					  {
+						"name": "电视剧",
+						"value": 578
+					  },
+					  {
+						"name": "行者",
+						"value": 576
+					  },
+					  {
+						"name": "医生",
+						"value": 542
+					  },
+					  {
+						"name": "一个",
+						"value": 514
+					  },
+					  {
+						"name": "最美",
+						"value": 490
+					  },
+					  {
+						"name": "导演",
+						"value": 487
+					  },
+					  {
+						"name": "这部",
+						"value": 485
+					  },
+					  {
+						"name": "抗疫",
+						"value": 483
+					  },
+					  {
+						"name": "演员",
+						"value": 471
+					  },
+					  {
+						"name": "他们",
+						"value": 418
+					  },
+					  {
+						"name": "自己",
+						"value": 412
+					  },
+					  {
+						"name": "眼泪",
+						"value": 400
+					  },
+					  {
+						"name": "知道",
+						"value": 384
+					  },
+					  {
+						"name": "看到",
+						"value": 379
+					  },
+					  {
+						"name": "伟大",
+						"value": 376
+					  },
+					  {
+						"name": "时候",
+						"value": 364
+					  },
+					  {
+						"name": "人民",
+						"value": 364
+					  },
+					  {
+						"name": "真实",
+						"value": 362
+					  },
+					  {
+						"name": "大家",
+						"value": 336
+					  },
+					  {
+						"name": "一直",
+						"value": 332
+					  },
+					  {
+						"name": "这么",
+						"value": 332
+					  },
+					  {
+						"name": "祖国",
+						"value": 328
+					  },
+					  {
+						"name": "希望",
+						"value": 327
+					  },
+					  {
+						"name": "一线",
+						"value": 324
+					  },
+					  {
+						"name": "终于",
+						"value": 314
+					  },
+					  {
+						"name": "就是",
+						"value": 308
+					  },
+					  {
+						"name": "还是",
+						"value": 305
+					  },
+					  {
+						"name": "辛苦",
+						"value": 302
+					  },
+					  {
+						"name": "什么",
+						"value": 297
+					  },
+					  {
+						"name": "因为",
+						"value": 280
+					  },
+					  {
+						"name": "点赞",
+						"value": 274
+					  },
+					  {
+						"name": "院长",
+						"value": 274
+					  },
+					  {
+						"name": "现在",
+						"value": 274
+					  },
+					  {
+						"name": "看着",
+						"value": 270
+					  },
+					  {
+						"name": "付出",
+						"value": 257
+					  },
+					  {
+						"name": "护士",
+						"value": 252
+					  },
+					  {
+						"name": "那些",
+						"value": 250
+					  },
+					  {
+						"name": "张嘉译",
+						"value": 246
+					  },
+					  {
+						"name": "白衣天使",
+						"value": 244
+					  },
+					  {
+						"name": "好看",
+						"value": 232
+					  },
+					  {
+						"name": "湖北",
+						"value": 230
+					  },
+					  {
+						"name": "开始",
+						"value": 229
+					  },
+					  {
+						"name": "当时",
+						"value": 226
+					  },
+					  {
+						"name": "怎么",
+						"value": 220
+					  },
+					  {
+						"name": "一部",
+						"value": 219
+					  },
+					  {
+						"name": "但是",
+						"value": 215
+					  },
+					  {
+						"name": "不是",
+						"value": 211
+					  },
+					  {
+						"name": "一样",
+						"value": 210
+					  },
+					  {
+						"name": "感觉",
+						"value": 207
+					  },
+					  {
+						"name": "应该",
+						"value": 206
+					  },
+					  {
+						"name": "一位",
+						"value": 203
+					  },
+					  {
+						"name": "医院",
+						"value": 200
+					  },
+					  {
+						"name": "国家",
+						"value": 200
+					  },
+					  {
+						"name": "感人",
+						"value": 200
+					  },
+					  {
+						"name": "生命",
+						"value": 198
+					  },
+					  {
+						"name": "那个",
+						"value": 198
+					  },
+					  {
+						"name": "可以",
+						"value": 193
+					  },
+					  {
+						"name": "第一集",
+						"value": 187
+					  },
+					  {
+						"name": "为什么",
+						"value": 184
+					  },
+					  {
+						"name": "作为",
+						"value": 177
+					  },
+					  {
+						"name": "电视",
+						"value": 174
+					  },
+					  {
+						"name": "那么",
+						"value": 172
+					  },
+					  {
+						"name": "这些",
+						"value": 172
+					  },
+					  {
+						"name": "谢谢",
+						"value": 169
+					  },
+					  {
+						"name": "期间",
+						"value": 167
+					  },
+					  {
+						"name": "害怕",
+						"value": 166
+					  },
+					  {
+						"name": "第一",
+						"value": 166
+					  },
+					  {
+						"name": "不要",
+						"value": 165
+					  },
+					  {
+						"name": "还有",
+						"value": 165
+					  },
+					  {
+						"name": "病毒",
+						"value": 165
+					  },
+					  {
+						"name": "不能",
+						"value": 164
+					  },
+					  {
+						"name": "工作者",
+						"value": 162
+					  },
+					  {
+						"name": "全国",
+						"value": 160
+					  },
+					  {
+						"name": "评分",
+						"value": 158
+					  },
+					  {
+						"name": "今年",
+						"value": 155
+					  },
+					  {
+						"name": "流泪",
+						"value": 154
+					  },
+					  {
+						"name": "等到",
+						"value": 153
+					  },
+					  {
+						"name": "心里",
+						"value": 150
+					  },
+					  {
+						"name": "一集",
+						"value": 150
+					  },
+					  {
+						"name": "为了",
+						"value": 149
+					  },
+					  {
+						"name": "喜欢",
+						"value": 149
+					  },
+					  {
+						"name": "经历",
+						"value": 149
+					  },
+					  {
+						"name": "谢谢你们",
+						"value": 148
+					  },
+					  {
+						"name": "人们",
+						"value": 148
+					  },
+					  {
+						"name": "明星",
+						"value": 147
+					  },
+					  {
+						"name": "觉得",
+						"value": 146
+					  },
+					  {
+						"name": "来看",
+						"value": 145
+					  },
+					  {
+						"name": "片酬",
+						"value": 143
+					  },
+					  {
+						"name": "期待",
+						"value": 142
+					  },
+					  {
+						"name": "这样",
+						"value": 141
+					  },
+					  {
+						"name": "感恩",
+						"value": 140
+					  },
+					  {
+						"name": "强大",
+						"value": 139
+					  },
+					  {
+						"name": "快乐",
+						"value": 137
+					  },
+					  {
+						"name": "前行",
+						"value": 136
+					  },
+					  {
+						"name": "只有",
+						"value": 135
+					  },
+					  {
+						"name": "口罩",
+						"value": 135
+					  },
+					  {
+						"name": "医护",
+						"value": 135
+					  },
+					  {
+						"name": "负重",
+						"value": 134
+					  },
+					  {
+						"name": "中秋",
+						"value": 133
+					  },
+					  {
+						"name": "每个",
+						"value": 129
+					  },
+					  {
+						"name": "工作",
+						"value": 128
+					  },
+					  {
+						"name": "有人",
+						"value": 128
+					  },
+					  {
+						"name": "这是",
+						"value": 127
+					  },
+					  {
+						"name": "一切",
+						"value": 126
+					  },
+					  {
+						"name": "这次",
+						"value": 123
+					  },
+					  {
+						"name": "虽然",
+						"value": 121
+					  },
+					  {
+						"name": "好好",
+						"value": 121
+					  },
+					  {
+						"name": "如果",
+						"value": 118
+					  },
+					  {
+						"name": "平凡",
+						"value": 118
+					  },
+					  {
+						"name": "人员",
+						"value": 117
+					  },
+					  {
+						"name": "过来",
+						"value": 116
+					  },
+					  {
+						"name": "忍不住",
+						"value": 116
+					  },
+					  {
+						"name": "很多",
+						"value": 115
+					  },
+					  {
+						"name": "今天",
+						"value": 115
+					  },
+					  {
+						"name": "出来",
+						"value": 114
+					  },
+					  {
+						"name": "已经",
+						"value": 114
+					  },
+					  {
+						"name": "难受",
+						"value": 114
+					  },
+					  {
+						"name": "这种",
+						"value": 112
+					  },
+					  {
+						"name": "特别",
+						"value": 112
+					  },
+					  {
+						"name": "必须",
+						"value": 112
+					  },
+					  {
+						"name": "过去",
+						"value": 111
+					  },
+					  {
+						"name": "新冠",
+						"value": 111
+					  },
+					  {
+						"name": "骄傲",
+						"value": 109
+					  },
+					  {
+						"name": "一年",
+						"value": 108
+					  },
+					  {
+						"name": "一次",
+						"value": 108
+					  },
+					  {
+						"name": "志愿者",
+						"value": 105
+					  },
+					  {
+						"name": "出演",
+						"value": 104
+					  },
+					  {
+						"name": "努力",
+						"value": 104
+					  },
+					  {
+						"name": "岁月",
+						"value": 104
+					  },
+					  {
+						"name": "结束",
+						"value": 97
+					  },
+					  {
+						"name": "演技",
+						"value": 97
+					  },
+					  {
+						"name": "每天",
+						"value": 96
+					  },
+					  {
+						"name": "感染",
+						"value": 95
+					  },
+					  {
+						"name": "值得",
+						"value": 95
+					  },
+					  {
+						"name": "这场",
+						"value": 94
+					  },
+					  {
+						"name": "起来",
+						"value": 94
+					  },
+					  {
+						"name": "只是",
+						"value": 94
+					  },
+					  {
+						"name": "看看",
+						"value": 94
+					  },
+					  {
+						"name": "心疼",
+						"value": 93
+					  },
+					  {
+						"name": "好多",
+						"value": 93
+					  },
+					  {
+						"name": "时间",
+						"value": 92
+					  },
+					  {
+						"name": "一定",
+						"value": 92
+					  },
+					  {
+						"name": "邓伦",
+						"value": 92
+					  },
+					  {
+						"name": "永远",
+						"value": 92
+					  },
+					  {
+						"name": "看怕",
+						"value": 92
+					  },
+					  {
+						"name": "前线",
+						"value": 89
+					  },
+					  {
+						"name": "止不住",
+						"value": 89
+					  },
+					  {
+						"name": "静好",
+						"value": 89
+					  },
+					  {
+						"name": "所以",
+						"value": 88
+					  },
+					  {
+						"name": "多少",
+						"value": 88
+					  },
+					  {
+						"name": "以后",
+						"value": 87
+					  },
+					  {
+						"name": "一名",
+						"value": 87
+					  },
+					  {
+						"name": "太难",
+						"value": 87
+					  },
+					  {
+						"name": "所有人",
+						"value": 87
+					  },
+					  {
+						"name": "钟南山",
+						"value": 86
+					  },
+					  {
+						"name": "泪点",
+						"value": 86
+					  },
+					  {
+						"name": "评论",
+						"value": 85
+					  },
+					  {
+						"name": "不了",
+						"value": 85
+					  },
+					  {
+						"name": "贡献",
+						"value": 84
+					  },
+					  {
+						"name": "真是",
+						"value": 84
+					  },
+					  {
+						"name": "片子",
+						"value": 84
+					  },
+					  {
+						"name": "稀里哗啦",
+						"value": 83
+					  },
+					  {
+						"name": "生活",
+						"value": 82
+					  },
+					  {
+						"name": "国庆",
+						"value": 81
+					  },
+					  {
+						"name": "纸巾",
+						"value": 81
+					  },
+					  {
+						"name": "电影",
+						"value": 81
+					  },
+					  {
+						"name": "泪目",
+						"value": 81
+					  },
+					  {
+						"name": "故事",
+						"value": 80
+					  },
+					  {
+						"name": "平安",
+						"value": 80
+					  },
+					  {
+						"name": "控制",
+						"value": 80
+					  },
+					  {
+						"name": "有点",
+						"value": 79
+					  },
+					  {
+						"name": "不错",
+						"value": 79
+					  },
+					  {
+						"name": "还原",
+						"value": 78
+					  },
+					  {
+						"name": "杨洋",
+						"value": 78
+					  },
+					  {
+						"name": "容易",
+						"value": 78
+					  },
+					  {
+						"name": "奋战",
+						"value": 77
+					  },
+					  {
+						"name": "支持",
+						"value": 77
+					  },
+					  {
+						"name": "天使",
+						"value": 77
+					  },
+					  {
+						"name": "下去",
+						"value": 76
+					  },
+					  {
+						"name": "战争",
+						"value": 76
+					  },
+					  {
+						"name": "不会",
+						"value": 76
+					  },
+					  {
+						"name": "奋斗",
+						"value": 76
+					  },
+					  {
+						"name": "非常",
+						"value": 76
+					  }
+                    ],
+                    //图片的base64编码
+                    image: "data:image/jpg;base64,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"
+                }
+                var myChart = echarts.init(document.getElementById('main'));
+                //温馨提示：image 选取有严格要求不可过大；，否则firefox不兼容  iconfont上面的图标可以
+                var maskImage = new Image();
+                maskImage.src = data.image
+ 
+                maskImage.onload = function () {
+                    myChart.setOption({
+                        backgroundColor: '#fff',
+                        tooltip: {
+                            show: false
+                        },
+                        series: [{
+                                type: 'wordCloud',
+                                gridSize: 1,
+                                sizeRange: [12, 55],
+                                rotationRange: [-45, 0, 45, 90],
+                                maskImage: maskImage,
+                                textStyle: {
+                                    normal: {
+                                        color: function () {
+                                            return 'rgb(' +
+                                                    Math.round(Math.random() * 255) +
+                                                    ', ' + Math.round(Math.random() * 255) +
+                                                    ', ' + Math.round(Math.random() * 255) + ')'
+                                        }
+                                    }
+                                },
+                                left: 'center',
+                                top: 'center',
+                                // width: '96%',
+                                // height: '100%',
+                                right: null,
+                                bottom: null,
+                                // width: 300,
+                                // height: 200,
+                                // top: 20,
+                                data: data.value
+                            }]
+                    })
+                }
+ 
+            }
+        </script>
+    </body>
+</html>
